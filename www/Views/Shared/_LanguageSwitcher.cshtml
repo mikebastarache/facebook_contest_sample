@@ -1,0 +1,10 @@
+﻿<li>
+    @if (Session["Culture"].ToString() == "fr-CA")
+    {
+        @Html.ActionLink("English", "SwitchLanguage", "LanguageSwitcher", new { language = "en-CA" }, new { rel = "external" })
+    } 
+    else 
+    {
+        @Html.ActionLink("Français", "SwitchLanguage", "LanguageSwitcher", new { language = "fr-CA" }, new { rel = "external" })
+    }
+</li>

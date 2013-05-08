@@ -1,0 +1,397 @@
+﻿    /* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #8a1e04;
+    clear:both;
+    display:inline;
+    margin:2px auto 0px 0px;
+    clear:both;
+    font-size:11px;
+    font-weight:bold;
+    padding: 0px 0px 10px 5px;
+    width:100%;
+}
+
+.form-block-registration .field-validation-error {
+    padding: 0px 0px 10px 5px;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+    clear:both;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.checkboxLabel {
+    font-size:10px;
+    line-height:normal;
+    font-family:Arial;
+}
+
+.fieldRequired {
+    visibility:hidden;
+    position:absolute;
+    display:inline;
+    color:#000000;
+    font-weight:bold;
+    margin:0px 0px 0px 5px;
+    font-size:0em;
+    line-height:0px;
+    width:0px;
+}
+
+.field-validation-error {
+    color: #8a1e04;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #8a1e04;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #8a1e04;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+
+/* FORMS */
+/* ================================================== */
+
+    /* === Remove input autofocus webkit === */
+    *:focus {outline: none;}
+
+    /* === Form Typography === */
+    .form_hint, .required_notification {font-size: 11px;}
+
+    /* === Form hints === */
+    .form_hint {
+	    background: #d45252;
+	    border-radius: 3px 3px 3px 3px;
+	    color: white;
+	    margin-left:8px;
+	    padding: 1px 6px;
+	    z-index: 999; /* hints stay above all other elements */
+	    position: absolute; /* allows proper formatting if hint is two lines */
+        width: 300px;
+	    display: none;
+    }
+    .form_hint::before {
+	    content: "\25C0";
+	    color:#d45252;
+	    position: absolute;
+	    top:1px;
+        font-size: 20px;
+	    left:-9px;
+    }
+
+
+    /* Home Page Form */
+/* ================================================== */
+    /* === List Styles === */
+    .form-block-home {
+        width:100%;
+        display:block;
+		position:relative;
+		top:0px;
+		margin:auto;
+    }
+    
+    .form-block-home ul {
+        width:100%;
+        list-style-type:none;
+	    list-style-position:outside;
+	    margin:0px;
+	    padding:0px;
+        z-index:2;
+    }
+    .form-block-home li{
+	    padding:0px 12px; 
+	    position:relative;
+        clear: both;
+	    margin:0px;
+	    padding:0px;
+        z-index:2;
+    }
+    /* === Form Elements === */
+    .form-block-home label {
+	    width:100%;
+        max-width:170px;
+		margin-top: 3px;
+	    display:inline-block;
+	    float:left;
+	    padding:3px 0px 0px 0px;
+        text-align:left;
+        text-align: left;
+        color:#025191;
+        font-weight:bold;
+    }
+    .form-block-home .checkboxLabel {
+	    width:88%;
+	    margin-top: 0px;
+        max-width:500px;
+	    display:inline-block;
+	    float:none;
+	    padding:3px 0px;
+        text-align: left;
+    }
+    .form-block-home input {}
+    .form-block-home input[type="text"], .form-block-home input[type="email"] {
+	    padding:5px 10px;
+        width:300px;
+        border:1px solid #000;
+        background:#e6e6e6;
+        display:inline; 
+        float:left;
+        z-index:2;
+    }
+    .form-block-home input[type="checkbox"] {
+	    height:15px; 
+	    width:15px; 
+	    margin:3px 8px 0px 0px;
+        vertical-align: top;
+    }
+
+    .form-block-home .field-validation-error {
+        clear:both;
+        display:block;
+        padding: 0px 0px 10px 170px;
+        margin:2px auto 0px 0px;
+    }
+	/* form element visual styles */
+	
+    .homecheckvalidation {
+        vertical-align: top;
+        width: 0px;
+    }
+
+
+    /* checkbox form element visual styles */
+    .form-block-home input[type="checkbox"] {
+	    padding-right:0px;
+        z-index:2;
+	}
+    /* === HTML5 validation styles === */	
+    .form-block-home input:required {
+	    background: #fff url(/facebook/monctonMomentsSubmission/Content/images/red_asterisk.png) no-repeat 98% center;
+    }
+    .form-block-home input:required:valid {
+	    background: #fff url(/facebook/monctonMomentsSubmission/Content/images/valid.png) no-repeat 98% center;
+	    box-shadow: 0 0 5px #5cd053;
+	    border-color: #28921f;
+    }
+    .form-block-home input:focus:invalid {
+	    background: #fff url(/facebook/monctonMomentsSubmission/Content/images/invalid.png) no-repeat 98% center;
+	    box-shadow: 0 0 5px #d45252;
+	    border-color: #b03535
+    }
+    .form-block-home input:focus + .form_hint {display: inline;}
+    .form-block-home input:required:valid + .form_hint {background: #28921f;}
+    .form-block-home input:required:valid + .form_hint::before {color:#28921f;}
+
+
+
+/* Registration Form */
+/* ================================================== */
+/* === List Styles === */
+.form-block-registration ul {
+    width:100%;
+    list-style-type:none;
+	list-style-position:outside;
+	margin:10px 0px 10px 0px;
+	padding:0px;
+    z-index:2;
+}
+.form-block-registration li{
+	padding:0px 0px; 
+	position:relative;
+    clear: both;
+    z-index:2;
+}
+
+/* === Form Header === */
+.form-block-registration h2 {
+	margin:0;
+	display: inline;
+}
+.required_notification {
+	color:#ffffff; 
+	margin:5px 0 0 0; 
+	display:inline;
+	float:left;
+}
+
+/* === Form Elements === */
+.form-block-registration label {
+	width:120px;
+	margin-top: 3px;
+	display:inline-block;
+	float:left;
+	padding:3px;
+    z-index:2;
+    color:#000;
+    font-weight:bold;
+}
+
+.form-block-registration .checkboxLabel {
+	width:100%;
+	margin: 2px 0px 0px 4px;
+	display:inline-block;
+	float:none;
+	padding:0px;
+    font-weight:normal;
+    font-size: 11px;
+}
+.form-block-registration input[type="text"] {
+	width:160px;
+    height:20px; 
+    padding:3px 8px;
+    margin:0px 3px 0px 0px;
+    z-index:2;
+}
+.form-block-registration select {
+	height:30px; 
+    width:200px;
+	padding:5px 8px;
+    margin:0px 3px 0px 0px;
+    z-index:2;
+}
+.form-block-registration input[type="radio"] {
+	height:15px; 
+	width:15px; 
+	padding:5px 8px;
+    z-index:2;
+}
+.form-block-registration input[type="checkbox"] {
+	height:15px; 
+	width:15px; 
+	margin:3px 8px 0px 0px;
+    vertical-align: top;
+        z-index:2;
+}
+
+.form-block-registration textarea {padding:8px; width:300px;}
+
+
+	/* form element visual styles */
+	.form-block-registration input[type="text"], .form-block-registration textarea, .form-block-registration select { 
+		border:1px solid #aaaaaa;
+		padding-right:30px;
+	}
+	.form-block-registration input[type="text"]:focus, .form-block-registration textarea:focus, .form-block-registration select:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa;
+	}
+    /* radio-button form element visual styles */
+	.form-block-registration input[type="radio"] {
+	    border: none;
+		box-shadow:none;
+		padding-right:0px;
+	    background: transparent;
+	}
+	.form-block-registration input[type="radio"]:focus {
+		background:transparent; 
+		border:none; 
+		box-shadow:none;
+	}
+    /* checkbox form element visual styles */
+    .form-block-registration input[type="checkbox"] {
+	    border: none;
+		box-shadow:none;
+		padding-right:0px;
+	    background:transparent;
+	}
+	.form-block-registration input[type="checkbox"]:focus {
+		background:transparent; 
+		border:none; 
+		box-shadow:none;
+	}
+
+
+
+/* === HTML5 validation styles === */	
+.form-block-registration input:required, .form-block-registration textarea:required, .form-block-registration select:required {
+	background: #fff url(/facebook/monctonMomentsSubmission/Content/images/red_asterisk.png) no-repeat 98% center;
+}
+.form-block-registration input:required:valid, .form-block-registration textarea:required:valid, .form-block-registration select:required:valid {
+	background: #fff url(/facebook/monctonMomentsSubmission/Content/images/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.form-block-registration input:focus:invalid, .form-block-registration textarea:focus:invalid, .form-block-registration select:focus:invalid {
+	background: #fff url(/facebook/monctonMomentsSubmission/Content/images/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+.form-block-registration input[type="radio"]:required {
+		background:transparent; 
+		border:none; 
+		box-shadow:none;
+	}
+
+
+/* === Form hints === */
+.form_hint {
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; /* hints stay above all other elements */
+	position: absolute; /* allows proper formatting if hint is two lines */
+    width: 300px;
+	display: none;
+}
+.form_hint::before {
+	content: "\25C0";
+	color:#d45252;
+	position: absolute;
+	top:1px;
+    font-size: 20px;
+	left:-9px;
+}
+.form-block-registration input:focus + .form_hint {display: inline;}
+.form-block-registration input:required:valid + .form_hint {background: #28921f;}
+.form-block-registration input:required:valid + .form_hint::before {color:#28921f;}
+
+.form-block-registration select:focus + .form_hint {display: inline;}
+.form-block-registration select:required:valid + .form_hint {background: #28921f;}
+.form-block-registration select:required:valid + .form_hint::before {color:#28921f;}
+
+
+
+.required_ notification {
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.form-block-registration .u .field-validation-error {
+    clear:both;
+    padding: 10px 0px 10px 205px;
+}
+
+.form-block-registration .u input[type="text"], .form-block-registration .u textarea {
+	width:300px;
+}
+.form-block-registration .u input[type="file"] {
+	width:340px;
+    border:1px solid #aaaaaa;
+}

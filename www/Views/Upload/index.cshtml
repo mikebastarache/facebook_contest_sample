@@ -1,0 +1,218 @@
+﻿@using GlobalResources = www.Web.Resources._LayoutResources
+@using MyResources = www.Web.Resources._UploadResource
+@using MyProperties = www.Properties.Settings
+@model www.Models.UploadViewModels
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = MyResources.PageTitle;
+    var mySignedRequest = HttpContext.Current.Request.Params["signed_request"];
+
+    var MyProtocol = HttpContext.Current.Request.Url.Scheme;
+    var redirect_url = MyProtocol + MyProperties.Default.facebook_app_url + "app_" + MyProperties.Default.AppID;
+    var fb_icon = MyProtocol + MyProperties.Default.ContestUrl_En + MyProperties.Default.ApplicationPath_En + "Content/Icons/og-meta-image-90x90.jpg";
+}
+
+<!-- This contains the hidden content for inline calls -->
+<div id="instructions-block">
+	<div id="inline_content">
+        <h2 style="margin-left:40px;">@Html.Raw(MyResources.Help_Title)</h2>
+        <table>
+            <tr>
+                <td><img src="~/Content/images/how-icon-1.png" width="120" height="120" /></td> 
+                <td><img src="~/Content/images/how-icon-2.png" width="120" height="120" /></td> 
+                <td><img src="~/Content/images/how-icon-3.png" width="120" height="120" /></td> 
+            </tr>
+            <tr>
+                <td>@Html.Raw(MyResources.Help_Step1)</td> 
+                <td>@Html.Raw(MyResources.Help_Step2)</td> 
+                <td>@Html.Raw(MyResources.Help_Step3)</td> 
+            </tr>
+            <tr>
+                <td colspan="3" class="helpFormats"><span class="helpFormatWrapper">@Html.Raw(MyResources.Help_Formats)</span></td>
+            </tr>
+        </table>
+	</div>
+</div>
+
+
+<div id="wrapper">
+<div id="upload-block">
+        <h3>@Html.Raw(MyResources.PageTitle)</h3>
+        <p>@Html.Raw(MyResources.Intro)</p>
+        <ol>
+        <li><p>@Html.Raw(MyResources.Step1)</p></li>
+        <li><p>@Html.Raw(MyResources.Step2)</p></li>
+        <li><p>@Html.Raw(MyResources.Step3)</p></li>
+        <li><p><a href="#inline_content" class="btn-sm">@Html.Raw(MyResources.Step4)</a></p></li>
+        </ol>
+        
+        
+        @using (Html.BeginForm("Index", "Upload", new { signed_request = mySignedRequest }, FormMethod.Post, new { enctype="multipart/form-data", @class = "form-block-registration", id = "form1" })) 
+        {
+            @Html.ValidationSummary(true)
+            <input type="hidden" name="Fbuid" value="@ViewBag.Fbuid" />
+            <input type="hidden" name="userID" value="@ViewBag.UserId" />
+            <input type="hidden" name="contestID" value="@MyProperties.Default.ContestId" />
+            
+            <div id="form-block-registration">
+            <ul>
+                <li>
+                    <span class="required_ notification" style="font-weight: bold;font-size: 9px; margin-left:430px;">@MyResources.RequiredFields</span>
+                </li>
+                
+                <li class="u">
+                    @Html.LabelFor(model => model.caption, MyResources.LabelCaption, new { @class = "label" })
+                    @Html.TextBoxFor(model => model.caption, new { @required = "required" })<span class="fieldRequired">*</span>
+                    @Html.ValidationMessageFor(model => model.caption, @MyResources.ValidationCaption)
+                </li>
+
+                <li class="u">
+                    @Html.LabelFor(model => model.filename, MyResources.LabelFile, new { @class = "label" })
+                    <input data-val="true" data-val-required="The filename field is required." id="filename" name="filename" required="required" class="@MyResources.filebutton" type="file" />
+                    <span class="fieldRequired">*</span>
+                    @Html.ValidationMessageFor(model => model.filename, @MyResources.ValidationFile)
+                </li>
+
+                <li class="u">
+                    @Html.RadioButtonFor(model => model.location, "1", new { @required = "required" })   @MyResources.LabelCityIn
+                    @Html.RadioButtonFor(model => model.location, "2", new { @required = "required" })   @MyResources.LabelCityOut<span class="fieldRequired">*</span>
+                    @Html.ValidationMessageFor(model => model.location, @MyResources.ValidationLocation)
+                </li>
+
+                <li class="u">
+                    @Html.LabelFor(model => model.description, MyResources.LabelLocation, "", new { @class = "LabelUpload", @id="description" })
+                    @Html.TextAreaFor(model => model.description)
+                </li>
+
+            </ul>
+
+            <br clear="all" />
+            <table>
+            <tr>
+                <td style="vertical-align:top; text-align:right;">@Html.CheckBoxFor(model => model.Concent19)</td>
+                <td class="homecheckvalidation"><span class="fieldRequired">*</span></td>
+                <td>@Html.LabelFor(model => model.Concent19, MyResources.LabelConcent19, "", new { @class = "checkboxLabel" })<br />
+                @Html.ValidationMessageFor(model => model.Concent19, MyResources.ValidationConcent19) </td>
+            </tr>
+            </table>
+                
+            <table>
+            <tr>
+                <td style="vertical-align:top; text-align:right;">@Html.CheckBoxFor(model => model.ConcentGuardian)</td>
+                <td class="homecheckvalidation"><span class="fieldRequired">*</span></td>
+                <td>@Html.LabelFor(model => model.ConcentGuardian, MyResources.LabelConcentGuardian, "", new { @class = "checkboxLabel" })<br />
+                    @Html.ValidationMessageFor(model => model.ConcentGuardian, MyResources.ValidationConcentGuardian) </td>
+            </tr>
+            </table>
+
+            @if (Model.alertMsg != null)
+            {
+                <div id="alertBlock">@Html.Raw(Model.alertMsg)</div>
+            }
+
+            <div style="text-align:center;">
+                <button type="submit" value="@MyResources.ButtonUploadAlt" class="@MyResources.ButtonUpload"></button>
+            </div>
+           </div>
+        }
+    </div>
+
+    <div class="wrapperfooter">
+        @Html.Raw(GlobalResources.footer_legal)
+    </div>
+</div>
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" href="~/Content/stylesheets/colorbox.css">
+	<script src="~/Scripts/jquery.colorbox-min.js"></script>
+    <script type="text/javascript">
+        
+        jQuery.validator.addMethod("enforcetrue", function (value, element, param) {
+            return element.checked;
+        });
+        jQuery.validator.unobtrusive.adapters.addBool("enforcetrue");
+
+        $(document).ready(function(){
+            $(".rulesPopUp").colorbox({ iframe: true, width: "80%", height: "80%" });
+            $(".btn-sm").colorbox({ inline: true, innerWidth: 610, innerHeight: 330 });
+            
+        });
+
+        $("input").on("click", function () {
+            locationVal = $("input:checked").val();
+            if (locationVal == 1) {
+                $("#description").html("@Html.Raw(MyResources.LabelLocation)");
+            } else {
+                $("#description").html("@Html.Raw(MyResources.LabelDescription)");
+            }
+        });
+
+        // Display a welcome message on first visit, and set a cookie that expires in 30 days:
+        if (document.cookie.indexOf('visited=true') === -1) {
+            var expires = new Date();
+            expires.setDate(expires.getDate() + 30);
+            document.cookie = "visited=true; expires=" + expires.toUTCString();
+            $.colorbox({ href: "#inline_content", inline: true, innerWidth: 610, innerHeight: 330 });
+        }
+        $.colorbox({ href: "#inline_content", inline: true, innerWidth: 610, innerHeight: 330 });
+    </script>
+
+    <script type="text/javascript">
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+
+        function streamPublish(name, description, hrefTitle, hrefLink, imageSrc) {
+            FB.ui(
+				{
+				    method: 'stream.publish',
+				    message: '',
+				    display: 'dialog',
+				    attachment: {
+				        name: (name),
+				        description: (description),
+				        href: hrefLink,
+				        media: [{
+				            "type": "image",
+				            "src": imageSrc,
+				            "href": hrefLink
+				        }]
+				    },
+
+				    action_links: [
+						{ text: hrefTitle, href: hrefLink }
+				    ]
+				},
+				function (response) {
+				    //__doPostBack('BtnContinue', '');
+				    document.forms["form1"].submit();
+				});
+        }
+
+
+
+        $("#form1").submit(function () {
+
+            if ($("#form1").valid()) {
+                streamPublish(
+                    "@GlobalResources.ShareTitle",
+                        "@GlobalResources.ShareDescription",
+                        "@GlobalResources.ShareTitle",
+                        "@redirect_url",
+                        "@fb_icon"
+                    );
+            }
+            //Return false regardless of validation to stop form submitting
+            //prior to ajax doing its thing
+            return false;
+        });
+   </script>
+}
+
+@section css {
+<!--[if lt IE 10 ]>
+<link rel="stylesheet" href="/facebook/monctonMomentsSubmission/Content/stylesheets/ie.css" />
+<![endif]-->
+}

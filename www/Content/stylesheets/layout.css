@@ -1,0 +1,410 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, 
+fieldset, form, label, legend,
+/*table, caption, tbody, tfoot, thead, tr, th, td,*/
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    background-color: #fffff8;
+}
+body {
+    background-color:#fffff8;
+	font-family: Arial, serif;
+	font-weight: normal;
+	font-size:14px;
+	color:#000;
+    line-height: 1.5em;
+    padding:0px;
+    margin:0px;
+    text-align:left;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/bgmainbg.png) top left repeat-y;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+	width:810px;
+}
+
+#wrapper {
+    text-align: left;
+    width:810px;
+    display:block;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/bgmainhero.jpg) top no-repeat;
+}
+
+#wrapper-thanks {
+    text-align: left;
+    width:810px;
+    height:670px;
+    display:block;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/bgmainthanks.jpg) top no-repeat;
+}
+
+.wrapperfooter-thanks {
+    clear:both;
+    padding:600px 15px 0px 15px;
+    width:780px;
+    text-align:center;
+    font-size:10px;
+    line-height:11px;
+    vertical-align:bottom;
+}
+
+#content-block {
+    clear:both;
+    padding:200px 0px 30px 135px; 
+    display:block;
+}
+
+#wrapper-block {
+    width:100%;
+    display:block;
+    position:relative;
+    z-index:2;
+}
+
+#upload-block {
+    clear:both;
+    padding:240px 90px 30px 135px; 
+    display:block;
+}
+
+
+#upload-block ol li {
+    font-weight: bold;
+}
+
+#upload-block ol li p {
+    font-weight: normal;
+    font-size:11px;
+}
+
+#wrapper-form {
+    padding:45px 120px 0px 120px;
+    text-align: left;
+    width:570px;
+    display:block;
+}
+
+#wrapper-registration-form {
+    padding:45px 100px 0px 100px;
+    text-align: left;
+    width:610px;
+    display:block;
+}
+
+#block-thanks-title {
+    position: absolute;
+    top: 330px;
+    left: 160px;
+    background-color:transparent;
+}
+
+#block-thanks-text {
+    position: absolute;
+    top: 370px;
+    left: 435px;
+    display:block;
+    width:340px;
+}
+
+p {
+    font-size:12px;
+    font-weight:normal;
+    padding:0px;
+    margin:10px 0px 10px 0px;
+}
+
+#block-thanks-text p {
+    line-height:1.2em;
+    font-family:Verdana;
+}
+
+li{
+    font-size:12px;
+    line-height:1.4em;
+    font-weight:normal;
+    padding:0px;
+    margin:10px 0px 10px 0px;
+    vertical-align:top;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+@font-face {
+font-family: 'Conv_VAGRounded BT';
+    src: url('/facebook/monctonMomentsSubmission/Content/fonts/VAGRoundedBT.eot'); /* IE9 Compat Modes */
+    src: url('/facebook/monctonMomentsSubmission/Content/fonts/VAGRoundedBT.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	        url('/facebook/monctonMomentsSubmission/Content/fonts/VAGRoundedBT.woff') format('woff'), /* Modern Browsers */
+	        url('/facebook/monctonMomentsSubmission/Content/fonts/VAGRoundedBT.ttf')  format('truetype'), /* Safari, Android, iOS */
+	        url('/facebook/monctonMomentsSubmission/Content/fonts/VAGRoundedBT.svg') format('svg'); /* Legacy iOS */
+}
+
+
+h1 {
+	font-family: 'Conv_VAGRounded BT', Nunito, Arial, serif;
+	font-size: 46px;
+    font-weight: bold;
+    margin-bottom:10px;
+    line-height:1.2em;
+    color:#000;
+}
+h2 {
+	font-family:'Conv_VAGRounded BT', Nunito, Arial, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin:20px 0px 20px 0px;
+    line-height:1.2em;
+    color:#000;
+}
+h3 {
+	font-family:'Conv_VAGRounded BT', Nunito, Arial, serif;
+    font-size: 18px;
+    line-height:1.1em;
+    color:#000;
+    margin:10px 0px 10px 0px;
+}
+h4 {
+	font-family:Arial, sans-serif;
+    font-size: 16px;
+    color:#000;
+    margin:10px 0px 10px 0px;
+}
+h5 {
+	font-family:Arial, sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+    color:#000;
+    margin:10px 0px 10px 0px;
+}
+sup
+{
+    vertical-align: baseline;
+	font-size: 0.8em;
+	position: relative;
+	top: -0.4em;
+}
+
+#wrapperhero {
+    position:absolute;
+    text-align: center;
+    width:810px;
+    display:block;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/bgmainhome.jpg) top no-repeat;
+}
+
+#wrapperhero .logo{
+    position:absolute;
+    top:330px;
+    right:170px;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/monctonmoments.png) no-repeat top left;
+    width:263px;
+    height:260px;
+
+}
+#wrapperhero .home {
+    width:355px;
+    padding:320px 0 0 15px;
+    font-family:Nunito;
+    text-align:center;
+}
+    #wrapperhero .home h1 {
+        font-size:20px;
+        line-height:20px;
+        color:#000;
+    }
+    
+    #wrapperhero .home h2 {
+        font-size:20px;
+        color:#09417f;
+    }
+    #wrapperhero .home h3 {
+        font-size:20px;
+        color:#09417f;
+    }
+    #wrapperhero .home p {
+        font-family:Nunito;
+        font-size:12px;
+        line-height:14px;
+    }
+    #wrapperhero .home .lrg {
+        font-size:20px;
+        text-transform:uppercase;
+        font-family:'Conv_VAGRounded BT', Nunito, Arial, serif;
+    }
+    #wrapperhero .home .sml {
+        font-size:10px;
+    }
+    #wrapperhero .home .blued {
+        color:#09417f;
+    }
+    #wrapperhero .home .bluel {
+        color:#0083c6;
+    }
+
+
+#wrapper .upload {
+    padding:255px 0 0 150px;
+}
+
+.wrapperfooter {
+    clear:both;
+    padding:10px 15px;
+    width:780px;
+    text-align:center;
+    font-size:10px;
+    line-height:11px;
+    vertical-align:bottom;
+}
+
+/*footer{
+	position:absolute;
+	bottom:0;
+    clear:both;
+    height:460px;
+    display:table-cell;
+	width:810px;
+    font-size:8px;
+    text-align:center;
+    line-height:1.3em;
+    color:#fff;
+    vertical-align:bottom;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/tree-line.png) bottom no-repeat;
+}*/
+
+#text-block {
+    display:block;
+    position:absolute;
+	bottom:0;
+    clear:both;
+	width:810px;
+    padding-bottom:12px;
+}
+
+footer a {
+    color: #FFF;
+}
+
+a {
+    color: #8a1e04;
+}
+
+a:hover {
+    color:#bd1f2d;
+}
+
+.tok_legal {
+    position: absolute;
+    top: 870px;
+    left: 0px;
+    font-size: 9px;
+    display: block;
+    width: 760px;
+    padding: 0px 0px 0px 20px;
+    text-align: center;
+    line-height: 1.2em;
+    color: #FFFFFF;
+    z-index: 99;
+}
+
+.tok_legal a {
+    color: #fff;
+}
+
+#overviewBtn {
+    position:fixed; top:120px; left:140px;
+}
+
+.form-block-registration .LabelUpload {
+	width:200px;
+    font-size:11px;
+    display:inline-block;
+    float:left;
+    text-align: left;
+	padding:3px;
+    z-index:2;
+    color:#000;
+    font-weight:normal;
+}
+
+.form-block-registration .label {
+	width:200px;
+	display:inline-block;
+	float:left;
+    text-align: left;
+	padding:3px;
+    z-index:2;
+    color:#000;
+    font-weight:normal;
+}
+
+#instructions-block {
+    display:none;
+    z-index:10;
+}
+
+#inline_content {
+    text-align:left;
+    display:inline;
+    width:650px;
+    z-index:10;
+    background:url(/facebook/monctonMomentsSubmission/Content/images/howto-bg.png.png) no-repeat top left;
+}
+
+#inline_content table td {
+    text-align: center;
+    width:180px;
+    padding:4px 10px;
+    font-size:12px;
+    line-height:1.2em;
+    vertical-align:top;
+}
+
+#inline_content table td strong {
+    font-size:15px;
+}
+
+.helpFormats {
+    color: #91917f;
+    text-align: left;
+}
+
+.helpFormatWrapper {
+    float:left; text-align:left; padding-left:20px;
+    font-size: 11px;
+    line-height:1.6em;
+}
+
+#alertBlock {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #f2dede;
+    border: 1px solid #eed3d7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color:#c64a6c;
+}

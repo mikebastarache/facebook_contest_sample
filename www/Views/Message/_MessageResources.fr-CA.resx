@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountCreationFailed_Message" xml:space="preserve">
+    <value>Une erreur est survenue au cours du processus d’inscription. &lt;br&gt;&lt;br&gt;Veuillez essayer de nouveau. Si le problème persiste, veuillez communiquer avec &lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="AccountCreationFailed_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="AccountUpdateFailed_Message" xml:space="preserve">
+    <value>Une erreur est survenue lors de votre tentative de mise à jour de votre profil. &lt;br&gt;&lt;br&gt;Veuillez essayer de nouveau. Si le problème persiste, veuillez communiquer avec &lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="AccountUpdateFailed_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="AlreadyEntered_Message" xml:space="preserve">
+    <value>Cette adresse courriel a déjà soumis un vote aujourd’hui. &lt;br&gt;&lt;br&gt;Veuillez revenir demain. Une journée de concours commence à 0 h et se &lt;br&gt;termine à 23 h 59 m 59 s (HE).</value>
+  </data>
+  <data name="AlreadyEntered_PageTItle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="BallotError_Message" xml:space="preserve">
+    <value>Une erreur est survenue en cours d'utilisation. &lt;br&gt;&lt;br&gt;Veuillez essayer de nouveau. Si l’erreur persiste, veuillez communiquer avec &lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="BallotError_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="ContestClosed_Message" xml:space="preserve">
+    <value>Le concours Moncton Moments  s’est terminé le 22 octobre 2013 à 23 h 59 HNE. &lt;br&gt;&lt;br&gt;Merci de votre participation!</value>
+  </data>
+  <data name="ContestClosed_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="ContestNotOpen_Message" xml:space="preserve">
+    <value>Le concours commence le 21 mai 2013 à 9 h (HNE).</value>
+  </data>
+  <data name="ContestNotOpen_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="FacebookAuthenticationFailed_Message" xml:space="preserve">
+    <value>You must authenticate this Facebook Application in order to enter this contest.</value>
+  </data>
+  <data name="FacebookAuthenticationFailed_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="Index_Message" xml:space="preserve">
+    <value>Une erreur est survenue en cours d'utilisation. &lt;br&gt;&lt;br&gt;Veuillez essayer de nouveau. Si l’erreur persiste, veuillez communiquer avec 
+&lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="Index_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="NotAgeOfMajority_Message" xml:space="preserve">
+    <value>Vous devez avoir l’âge de la majorité dans votre province ou territoire de résidence pour participer au Councours doux et vert de MAJESTA.</value>
+  </data>
+  <data name="NotAgeOfMajority_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="ParentalPermission_Message" xml:space="preserve">
+    <value>You need your parent's permission. FPO.</value>
+  </data>
+  <data name="ParentalPermission_PageTitle" xml:space="preserve">
+    <value>We're Sorry.</value>
+  </data>
+  <data name="SessionLost_Message" xml:space="preserve">
+    <value>Votre session a expiré pour cause d'inactivité.  &lt;br&gt;&lt;br&gt;Allez à la page principale du concours et recommencez le processus de participation.  &lt;br&gt;&lt;br&gt;Votre session</value>
+  </data>
+  <data name="SessionLost_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="UserDoesNotExist_Message" xml:space="preserve">
+    <value>L’adresse de courriel que vous avez inscrite n’existe pas dans la communauté. &lt;br&gt;&lt;br&gt;Veuillez inscrire une autre adresse de courriel. Si le problème persiste, veuillez communiquer avec &lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="UserDoesNotExist_PageTitle" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="WeAreSorry" xml:space="preserve">
+    <value>Nous sommes désolés.</value>
+  </data>
+  <data name="contest_legal_url" xml:space="preserve">
+    <value>http://arbredelaconnaissancemajesta.ca</value>
+  </data>
+  <data name="contest_legal" xml:space="preserve">
+    <value>†Aucun achat nécessaire. Assujetti aux règlements officiels disponibles sur le site &lt;a href="http://www.majesta.com" target="_blank"&gt;www.majesta.com&lt;/a&gt;. Concours ouvert aux résidents du Canada qui ont atteint l’âge de la majorité dans leur province ou territoire de résidence. Jouez au jeu « Arbragramme » et courez la chance de gagner 10 000 $ CAN. Le concours prend fin à 23 h 59 (HE) le 26 avril 2013. Il y a un prix à gagner qui consiste en une somme de 10 000 $ CAN. Un tirage au sort sera effectué le 9 mai 2013. Les chances de gagner dépendent du nombre total de participations admissibles reçues. Pour être déclarée gagnante, la personne devra répondre correctement à une question réglementaire et signer un formulaire de déclaration et de renonciation.</value>
+  </data>
+  <data name="thanks_img_title" xml:space="preserve">
+    <value>thanks-fr.png</value>
+  </data>
+  <data name="thanks_img_title_alt" xml:space="preserve">
+    <value>Merci! Votre moment mémorable à Moncton a été téléchargé avec succès.</value>
+  </data>
+  <data name="thanks_text" xml:space="preserve">
+    <value>&lt;p&gt;Il faut compter un jour ou deux pour que vous puissiez visionner votre vidéo ou photo sur la page Facebook.&lt;/p&gt;
+
+&lt;p&gt;Mais n’arrêtez pas de filmer ou de photographier. Vous pouvez soumettre une nouvelle vidéo ou photo TOUS LES JOURS, &lt;strong&gt;jusqu’au 26 août!&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;Et, rappelez-vous, &lt;strong&gt;le vote pour le gagnant du grand prix débute le 3 septembre.&lt;/strong&gt; Alors, faites penser à vos amis de vérifier vos soumissions et de voter pour elles. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Montrons au monde à quel point Moncton est véritablement une ville mémorable!&lt;/strong&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="UploadFailed_Message" xml:space="preserve">
+    <value>Unable to Upload</value>
+  </data>
+  <data name="UploadFailed_PageTitle" xml:space="preserve">
+    <value>Sorry, we were unable to upload your file. Please try again or contact us at &lt;a href="mailto:majesta@modernmedia.ca"&gt;majesta@modernmedia.ca&lt;/a&gt;.</value>
+  </data>
+  <data name="MyFiles" xml:space="preserve">
+    <value>Files that you have submitted.</value>
+  </data>
+</root>

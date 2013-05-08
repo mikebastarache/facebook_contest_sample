@@ -1,0 +1,27 @@
+﻿@using GlobalResources = www.Web.Resources._LayoutResources
+@using MyResources = www.Web.Resources._MessageResources
+@model IEnumerable<www.Models.Submission>
+
+@{
+    ViewBag.Title = @MyResources.thanks_img_title_alt;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="wrapper-thanks">
+    <div id="block-thanks-title"><img src="~/Content/images/@MyResources.thanks_img_title" width="264" height="264" alt="@MyResources.thanks_img_title_alt" /></div>
+    <div id="block-thanks-text">
+        @Html.Raw(MyResources.thanks_text)
+        <p><strong>@MyResources.MyFiles</strong></p>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li><a href="~/uploads/@item.filename" target="_blank">@item.filename</a></li>
+            }
+        </ul>
+        </div>
+    </div>
+    
+    <div class="wrapperfooter-thanks">
+        @Html.Raw(GlobalResources.footer_legal)
+    </div>
+</div>

@@ -1,0 +1,103 @@
+﻿.btn-e{
+    width:132px;
+	height:59px;
+	background-image: url(/facebook/monctonMomentsSubmission/Content/images/btn-next.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	text-decoration:none;
+    cursor:pointer;
+    z-index:20;
+    background-color:transparent;
+    border:none;
+}
+
+.btn-f{
+    width:132px;
+	height:59px;
+	background-image: url(/facebook/monctonMomentsSubmission/Content/images/btn-next-fr.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	text-decoration:none;
+    cursor:pointer;
+    z-index:20;
+    background-color:transparent;
+    border:none;
+}
+
+
+.btn-upload-e{
+    width:222px;
+	height:51px;
+	background-image: url(/facebook/monctonMomentsSubmission/Content/images/btn-upload.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	text-decoration:none;
+    cursor:pointer;
+    z-index:20;
+    background-color:transparent;
+    border:none;
+}
+
+.btn-upload-f{
+    width:292px;
+	height:51px;
+	background-image: url(/facebook/monctonMomentsSubmission/Content/images/btn-upload-fr.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	text-decoration:none;
+    cursor:pointer;
+    z-index:20;
+    background-color:transparent;
+    border:none;
+}
+
+
+.filebutton::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.filebutton:before {
+  content: 'Browse';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.filebutton:hover:before {
+  border-color: black;
+}
+.filebutton:active:before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.filebuttonF::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.filebuttonF:before {
+  content: 'Fureter';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.filebuttonF:hover:before {
+  border-color: black;
+}
+.filebuttonF:active:before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

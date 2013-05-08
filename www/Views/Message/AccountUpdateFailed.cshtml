@@ -1,0 +1,31 @@
+﻿@using GlobalResources = www.Web.Resources._HomeResources
+@using MyResources = www.Web.Resources._MessageResources
+
+@{
+    ViewBag.Title = @GlobalResources.Page_Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="wrapper">
+    <div id="content-block"><br /><br />
+    <h1>@MyResources.WeAreSorry</h1>
+    <h5>@Html.Raw(MyResources.AccountUpdateFailed_Message)</h5></div>
+</div>
+
+@section Scripts {
+<script type="text/javascript">
+    $(document).ready(function () {
+        var mainContainer = $("#wrapper");
+
+        var resizeTimer = setInterval(function () {
+
+            // fix for FF to make setAutoGrow work.
+            mainContainer.height('auto');
+            var newHeight = mainContainer.height();
+            mainContainer.height(newHeight);
+
+            // fixes lack of auto shrink
+            FB.Canvas.setSize({ height: newHeight });
+        }, 500);
+    });
+</script>
+}

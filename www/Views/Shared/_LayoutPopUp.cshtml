@@ -1,0 +1,43 @@
+﻿@using MyResources = www.Web.Resources._LayoutResources
+@using MyProperties = www.Properties.Settings
+
+@{ 
+   var MyProtocol = HttpContext.Current.Request.Url.Scheme;
+}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>@MyResources.SiteTitle | @ViewBag.Title</title>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="@MyProtocol://fonts.googleapis.com/css?family=Lobster">
+	<link rel="stylesheet" href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/bundles/css")">
+
+    <script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/bundles/modernizr")"></script>
+
+	<!--[if lt IE 9]>
+		<script src="@MyProtocol://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <style type="text/css" media="all">
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+	<body>
+        @RenderBody()
+    </body>
+</html>

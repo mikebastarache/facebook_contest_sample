@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="www.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ContestId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="WebApiUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.majestapromotions.ca</Value>
+    </Setting>
+    <Setting Name="SiteTitle_En" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MAJESTA</Value>
+    </Setting>
+    <Setting Name="BallotSource" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Facebook</Value>
+    </Setting>
+    <Setting Name="SiteTitle_Fr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MAJESTA</Value>
+    </Setting>
+    <Setting Name="ContestStartDate" Type="System.DateTime" Scope="Application">
+      <Value Profile="(Default)">2013-02-27</Value>
+    </Setting>
+    <Setting Name="ContestCloseDate" Type="System.DateTime" Scope="Application">
+      <Value Profile="(Default)">04/30/2013 11:59:00</Value>
+    </Setting>
+    <Setting Name="Domain_Fr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">promotionsmajesta.ca</Value>
+    </Setting>
+    <Setting Name="Domain_En" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">majestapromotions.ca</Value>
+    </Setting>
+    <Setting Name="ApplicationPath_En" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/facebook/monctonMomentsSubmissions</Value>
+    </Setting>
+    <Setting Name="ApplicationPath_Fr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/facebook/monctonMomentsSubmissions</Value>
+    </Setting>
+    <Setting Name="ExtendedPermissions" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AppID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">155143411323567</Value>
+    </Setting>
+    <Setting Name="AppSecret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">3c56e023256af376c98d04f90047418f</Value>
+    </Setting>
+    <Setting Name="ContestUrl_En" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">://localhost:49660/</Value>
+    </Setting>
+    <Setting Name="ContestUrl_Fr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">://localhost:49660/</Value>
+    </Setting>
+    <Setting Name="facebook_app_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">://www.facebook.com/mmproofing/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

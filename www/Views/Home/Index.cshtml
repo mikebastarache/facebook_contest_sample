@@ -1,0 +1,41 @@
+﻿@using MyMasterResources = www.Web.Resources._LayoutResources
+@using MyResources = www.Web.Resources._HomeResources
+
+@{
+    ViewBag.Title = @MyResources.Page_Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var mySignedRequest = HttpContext.Current.Request.Params["signed_request"];
+}
+
+<div id="wrapperhero">
+    <div class="home">
+        
+        @Html.Raw(MyResources.Home_Copy)
+        
+        <a href="home/fblogin?signed_request=@mySignedRequest"><img src="@MyResources.Home_Btn" /></a>
+    </div>
+    <div class="logo"></div>
+    <div class="wrapperfooter">
+        @Html.Raw(MyMasterResources.footer_legal)
+
+    </div>
+</div>
+
+@section Scripts {
+<script type="text/javascript">
+    $(document).ready(function () {
+        var mainContainer = $("#wrapperhero");
+
+        var resizeTimer = setInterval(function () {
+
+            // fix for FF to make setAutoGrow work.
+            mainContainer.height('auto');
+            var newHeight = mainContainer.height();
+            mainContainer.height(newHeight);
+
+            // fixes lack of auto shrink
+            FB.Canvas.setSize({ height: newHeight });
+        }, 720);
+    });
+</script>
+}

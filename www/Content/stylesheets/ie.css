@@ -1,0 +1,15 @@
+﻿.fieldRequired {
+    visibility:visible;
+    width:15px;
+    font-size:3.0em;
+    line-height:1.0em;
+}
+
+.homecheckvalidation {
+    vertical-align: top;
+    width: 20px;
+}
+
+.field-validation-error {
+    margin:2px auto 0px 15px;
+}

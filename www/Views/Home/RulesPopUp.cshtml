@@ -1,0 +1,15 @@
+﻿@using MyResources = www.Web.Resources._LayoutResources
+
+@{
+    Layout = "~/Views/Shared/_LayoutPopUp.cshtml";
+}
+
+@{
+    if(Session["Culture"].ToString() == "fr-CA") {
+      @RenderPage("rules_fr.cshtml")
+
+    } else {
+      @RenderPage("rules_en.cshtml")
+        
+    }
+}

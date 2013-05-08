@@ -1,0 +1,142 @@
+﻿@using GlobalResources = www.Web.Resources._LayoutResources
+@using MyResources = www.Web.Resources._RegistrationResource
+@using MyProperties = www.Properties.Settings
+
+@{
+    ViewBag.Title = MyResources.Registration_PageTitle;
+    var mySignedRequest = HttpContext.Current.Request.Params["signed_request"];
+    
+    var now = DateTime.Now;
+    var Years = Enumerable.Range(0, 90).Select(x => new SelectListItem { Value = ((now.Year - 18) - x).ToString(), Text = ((now.Year - 18) - x).ToString() });
+    var friendId = 0;
+    
+    if(Session["friendId"] != null) {
+        friendId = Int32.Parse(Session["friendId"].ToString());
+    }
+}
+
+<div id="wrapper">
+<div id="content-block">
+<h1>@Html.Raw(MyResources.Registration_PageTitle)</h1>
+<p>@Html.Raw(MyResources.Registration_Intro)</p>
+
+@using (Html.BeginForm("Index", "Register", new { signed_request = mySignedRequest }, FormMethod.Post, new { @class = "form-block-registration", id = "form1" })) {
+@Html.ValidationSummary(true)
+
+<input type="hidden" name="Fbuid" value="@ViewBag.Fbuid" />
+<input type="hidden" name="Language" value="@Session["Culture"].ToString()" />
+<input type="hidden" name="ContestSignupId" value="@MyProperties.Default.ContestId" />
+     
+<div id="form-block-registration">
+    <ul>
+    <li>
+        <span class="required_ notification">@MyResources.RequiredFields</span>
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.Salutation, MyResources.Index_LabelSalutation)
+        @Html.RadioButtonFor(model => model.Salutation, "1", new { @required = "required" })   @MyResources.Index_LabelMr
+        @Html.RadioButtonFor(model => model.Salutation, "2", new { @required = "required" })   @MyResources.Index_LabelMs<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.Salutation, @MyResources.ValidationSalutation)
+    </li>
+
+    <li>
+        @Html.LabelFor(model => model.FirstName, MyResources.Index_LabelFirstName)
+        @Html.TextBoxFor(model => model.FirstName, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.FirstName, @MyResources.ValidationFirstName)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.LastName, MyResources.Index_LabelLastName)
+        @Html.TextBoxFor(model => model.LastName, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.LastName, @MyResources.ValidationLastName)
+    </li>  
+           
+    <li>
+        @Html.LabelFor(model => model.Email, MyResources.Index_LabelEmail)
+        @Html.TextBoxFor(model => model.Email, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.Email, @MyResources.ValidationEmail)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.Address1, MyResources.Index_LabelAddress1)
+        @Html.TextBoxFor(model => model.Address1, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.Address1, @MyResources.ValidationAddress)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.Address2, MyResources.Index_LabelAddress2)
+        @Html.TextBoxFor(model => model.Address2)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.City, MyResources.Index_LabelCity)
+        @Html.TextBoxFor(model => model.City, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.City, @MyResources.ValidationCity)
+    </li>
+          
+    <li>
+        @Html.LabelFor(model => model.Province, MyResources.Index_LabelProvince)
+        @Html.DropDownListFor(model => model.Province, (SelectList)ViewBag.Province, @MyResources.Index_Select, new { @required = "required" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.Province, @MyResources.ValidationProvince)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.PostalCode, MyResources.Index_LabelPostalCode)
+        @Html.TextBoxFor(model => model.PostalCode, new { @required = "required", @placeholder="A1A 1A1", @pattern="[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\\d{1}[A-Za-z]{1} *\\d{1}[A-Za-z]{1}\\d{1}" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.PostalCode, @MyResources.ValidationPostalCode)
+    </li>
+                
+    <li>
+        @Html.LabelFor(model => model.Telephone, MyResources.Index_LabelTelephone)
+        @Html.TextBoxFor(model => model.Telephone, new { @required = "required", @placeholder="(555) 555-5555", @pattern="(1\\s*[-\\/\\.]?)?(\\((\\d{3})\\)|(\\d{3}))\\s*[-\\/\\.]?\\s*(\\d{3})\\s*[-\\/\\.]?\\s*(\\d{4})\\s*(([xX]|[eE][xX][tT])\\.?\\s*(\\d+))*" })<span class="fieldRequired">*</span>
+        @Html.ValidationMessageFor(model => model.Telephone, @MyResources.ValidationTelephone)
+    </li>
+</ul>
+</div>
+
+<table>
+<tr>
+    <td style="width:400px;">
+        <table>
+        <tr>
+            <td style="vertical-align:top; text-align:right;">@Html.CheckBoxFor(model => model.AcceptRules)</td>
+            <td class="homecheckvalidation"><span class="fieldRequired">*</span></td>
+            <td>@Html.LabelFor(model => model.AcceptRules, MyResources.Index_LabelAcceptRules, "", new { @class = "checkboxLabel" })</td>
+        </tr>
+        </table>
+        @Html.ValidationMessageFor(model => model.AcceptRules, MyResources.ValidationAgreeRules) 
+    </td>
+    <td style="text-align:left; width:350px;">
+        <button type="submit" value="@MyResources.Index_ButtonSubmitAlt" class="@MyResources.Index_ButtonSubmit"></button>
+    </td>
+</tr>
+</table>
+
+}
+</div>
+<div class="wrapperfooter">
+    @Html.Raw(GlobalResources.footer_legal)
+</div>
+</div>
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+    <link rel="stylesheet" href="~/Content/stylesheets/colorbox.css">
+	<script src="~/Scripts/jquery.colorbox-min.js"></script>
+    <script type="text/javascript">
+        jQuery.validator.addMethod("enforcetrue", function (value, element, param) {
+            return element.checked;
+        });
+        jQuery.validator.unobtrusive.adapters.addBool("enforcetrue");
+
+        $(document).ready(function(){
+            $(".rulesPopUp").colorbox({ iframe: true, width: "80%", height: "80%" });
+        });
+    </script>
+}
+
+@section css {
+<!--[if lt IE 10 ]>
+<link rel="stylesheet" href="/facebook/monctonMomentsSubmission/Content/stylesheets/ie.css" />
+<![endif]-->
+}
